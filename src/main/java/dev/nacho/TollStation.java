@@ -1,14 +1,28 @@
 package dev.nacho;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TollStation {
     private String name;
     private String city;
     private int tollCollected;
+    private List<Vehicle> vehicles;
 
     public TollStation(String name, String city, int tollCollected) {
         this.name = name;
         this.city = city;
         this.tollCollected = tollCollected;
+        this.vehicles = new ArrayList<>();
+
+    }
+
+    public int getTollCollected() {
+        return tollCollected;
+    }
+
+    public List<Vehicle> getVehicles() {
+        return vehicles;
     }
 
     public void calculateToll(Vehicle vehicle) {
@@ -20,6 +34,10 @@ public class TollStation {
         };
 
         tollCollected = tollCollected + toll ;
+        vehicles.add(vehicle);
+        
+
+        
     }
 
 
