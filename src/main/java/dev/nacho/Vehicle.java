@@ -1,9 +1,9 @@
 package dev.nacho;
 
-public abstract class Vechicle {
+public abstract class Vehicle {
     protected final String plate;
 
-    public Vechicle(String plate) {
+    public Vehicle(String plate) {
         this.plate = plate;
     }
 
